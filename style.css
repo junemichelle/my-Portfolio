@@ -301,9 +301,11 @@ timeline-content p{
 .services{
   background: var(--bg-color);
   color: black;
+  
    a{
     font-size: 25px;
-    color: var(--main-color);
+    color: var(black);
+    padding: 40px;
    }
    a:hover{
     color: black;
