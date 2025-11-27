@@ -76,7 +76,8 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15rem;
+  gap: clamp(2rem, 6vw, 15rem);
+  flex-wrap: wrap;
 }
 .home-content{
   display: flex;
@@ -95,21 +96,25 @@ span{
 .home-content h3{
   margin-bottom: 2rem;
   margin-top: 1rem;
-  font-size: 3.5rem;
+  font-size: clamp(1.6rem, 3.2vw, 3.5rem);
 }
 .home-content h1{
-  font-size: 7rem;
+  font-size: clamp(2.4rem, 8vw, 7rem);
   font-weight: 700;
   margin-top: 1.5rem;
   line-height: 1;
 }
 .home-img{
   border-radius: 50%;
+  width: min(360px, 32vw);
+  flex: 0 0 auto;
 }
 .home-img img{
   position: relative;
   top: 3rem;
-  width: 32vw;
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
@@ -263,7 +268,7 @@ span{
   color: white;
   margin: 6px 0 15px;
 }
-timeline-content{
+.timeline-content{
   background-color: var(--bg-color);
   border: 3px solid var(--main-color);
   padding: 30px 50px;
@@ -282,7 +287,8 @@ timeline-content{
   margin: 0 0 10px;
   font-weight: 500;
 }
-timeline-content p{
+
+.timeline-content p{
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -301,21 +307,20 @@ timeline-content p{
 .services{
   background: var(--bg-color);
   color: black;
-  
-   a{
-    font-size: 25px;
-    color: var(black);
-    padding: 40px;
-   }
-   a:hover{
-    color: black;
-    background: var(--main-color);
-    border-radius: 3px;
-    box-shadow: 0 0 25px var(--main-color),
-    0 0 50px var(--main-color),
-    0 0 100px var(--main-color);
-    transition: ease-in-out;
-   }
+}
+.services a{
+  font-size: 25px;
+  color: black;
+  padding: 40px;
+}
+.services a:hover{
+  color: black;
+  background: var(--main-color);
+  border-radius: 1px;
+  box-shadow: 0 0 5px var(--main-color),
+  0 0 5px var(--main-color),
+  0 0 10px var(--main-color);
+  transition: ease-in-out;
 }
 .services h2{
   margin-bottom: 5rem;
@@ -329,11 +334,12 @@ timeline-content p{
 }
 .service-box{
   background-color: var(--main-color);
-  height: 300px;
+  height: auto;
   border-radius: 3rem;
   border: 5px solid transparent;
   cursor: pointer;
-  transition: 0.4 ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  padding: 1.5rem;
 }
 .service-box:hover{
   background: white;
@@ -345,22 +351,28 @@ timeline-content p{
   display: flex;
   flex-direction: column;
   text-align: left;
-  max-height: 200px;
   justify-content: left;
   align-items: baseline;
-  padding: 5rem 5rem;
+  padding: clamp(1rem, 3vw, 3rem);
+  gap: 1rem;
 }
 .service-info h4{
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
   font-weight: 800;
-  line-height: 2;
+  line-height: 1.3;
 }
 .service-info p{
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   font-weight: 600;
-  max-height: 100px;
-  line-height: 1.7;
-  margin: auto;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.service-info a{
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: black;
+  background: transparent;
 }
 .testimonials{
   background: var(--second-bg-color);
@@ -422,9 +434,9 @@ timeline-content p{
 }
 .contact{
   background-color: var(--bg-color);
-  p{
-    font-size: 20px;
-  }
+}
+.contact p{
+  font-size: 20px;
 }
 .contact h2{
   margin-bottom: 3rem;
@@ -609,5 +621,15 @@ timeline-content p{
   .services-container{
     grid-template-columns: repeat(1,1fr);
   }
+}
+
+/* Responsive rules for profile image (local asset) */
+#profile-image{
+  max-width:360px;
+  width:32vw;
+  height:auto;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 
