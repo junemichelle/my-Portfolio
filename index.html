@@ -126,31 +126,33 @@
     </section>
 
    
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
 
-      <form action="send_email.php" method="post">
-        <div class="input-group">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-            </div>
-            <div class="input-box">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="text" name="subject" placeholder="Subject">
-            </div>
-        </div>
-    
-        <div class="input-group-2">
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </div>
-    </form>
+  <form name="contact" method="POST" data-netlify="true">
+    <!-- Required hidden field for Netlify -->
+    <input type="hidden" name="form-name" value="contact">
 
-    <p>note from site developer: this site may not work as expected development in progress</p>
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="subject" placeholder="Subject">
+      </div>
+    </div>
 
-      
-    </section>
+    <div class="input-group-2">
+      <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </div>
+  </form>
+
+  <p>Note from site developer: this site may not work as expected development in progress</p>
+</section>
+
     <footer class="footer">
       <div class="social">
         <a href="#"><i class="bx bxl-linkedin-square"></i></a>
