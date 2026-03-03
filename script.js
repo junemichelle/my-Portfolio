@@ -25,3 +25,23 @@ menuIcon.onclick = ()=>{
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 }
+
+const form = document.getElementById("contact-form");
+const thankYou = document.getElementById("thank-you");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const data = new URLSearchParams(new FormData(form)).toString();
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: data
+  })
+  .then(() => {
+    form.style.display = "none";
+    thankYou.style.display = "block";
+  })
+  .catch((error) => alert("Form submission failed: " + error));
+});
