@@ -31,10 +31,12 @@
         <p>note from site developer: this site may not work as expected development in progress</p>
 
         <h1>Hello, I'm <span>Michelle</span></h1>
-        <h3 class="text-animation">I'm a <span>software developer</span></h3>
+        <h3 class="text-animation">I'm a <span>Software Developer & Flight Operations Specialist</span></h3>
         <p>
           Completed an intensive course in software development covering Python, JavaScript, SQL, React, and Flask.
           Gained hands-on experience in developing web applications and databases.Proficient in Python, JavaScript, SQL, React, and Flask.
+          In addition to tech, I have a background in Flight Dispatch and Operations,flight planning, operational coordination, and ground flight safety procedures.
+          I am passionate about combining aviation knowledge with technology solutions.
 
         </p>
         <div class="social-icons">
@@ -42,13 +44,13 @@
           <a href="https://github.com/junemichelle/junemichelle-About-Me-"
             ><i class="bx bxl-github"></i
           ></a>
-          <a href="#"><i class="bx bxl-linkedin-square"></i></a>
-          <a href="#"><i class="bx bxl-instagram"></i></a>
-          <a href="#"><i class="bx bxl-whatsapp-square"></i></a>
+          <a href="https://www.linkedin.com/in/michelle-june-7b3a5b20a/"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="https://www.instagram.com/call.sign.mj?igsh=MXdpb2sxYmExZ2VlaQ=="><i class="bx bxl-instagram"></i></a>
+          <a href="https://wa.me/1234567890"><i class="bx bxl-whatsapp-square"></i></a>
   
         </div>
         <div class="button-group">
-          <a href="#" class="btn">Hire Me</a>
+          <a href="#contact" class="btn">Hire Me</a>
           <a href="#contact" class="btn">Contact</a>
         </div>
       </div>
@@ -127,31 +129,34 @@
 
    
 <section class="contact" id="contact">
-  <h2 class="heading">Contact <span>Me</span></h2>
+    <h2 class="heading">Contact <span>Me</span></h2>
 
-  <form name="contact" method="POST" data-netlify="true">
-    <!-- Required hidden field for Netlify -->
-    <input type="hidden" name="form-name" value="contact">
+    <form id="contact-form" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
 
-    <div class="input-group">
-      <div class="input-box">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
+      <div class="input-group">
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <input type="text" name="subject" placeholder="Subject">
+        </div>
       </div>
-      <div class="input-box">
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <input type="text" name="subject" placeholder="Subject">
+
+      <div class="input-group-2">
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
       </div>
-    </div>
+    </form>
 
-    <div class="input-group-2">
-      <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message" class="btn">
-    </div>
-  </form>
+    <p id="thank-you" style="display:none; color: var(--main-color); font-size:2rem; text-align:center; margin-top:2rem;">
+      Thanks! Your message has been sent.
+    </p>
 
-  <p>Note from site developer: this site may not work as expected development in progress</p>
-</section>
+    <p>Note from site developer: this site may not work as expected — development in progress</p>
+  </section>
 
     <footer class="footer">
       <div class="social">
@@ -159,22 +164,19 @@
         <a href="https://github.com/junemichelle/junemichelle-About-Me-"
           ><i class="bx bxl-github"></i
         ></a>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.instagram.com/call.sign.mj?igsh=MXdpb2sxYmExZ2VlaQ=="><i class="bx bxl-instagram"></i></a>
         <a href="#"><i class="bx bxl-whatsapp-square"></i></a>
       </div>
 
       <ul class="list">
         <li>
-          <a href="">FAQ</a>
+          <a href="#services">Projects</a>
         </li>
         <li>
-          <a href="">Projects</a>
+          <a href="#home">About Me</a>
         </li>
         <li>
-          <a href="">About Me</a>
-        </li>
-        <li>
-          <a href="">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
 
       </ul>
