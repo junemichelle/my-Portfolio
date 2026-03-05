@@ -16,6 +16,7 @@ This is a portfolio website showcasing my projects and providing a way for visit
 This portfolio website provides information about you, your skills, projects you've worked on, and a contact form for visitors to reach out to you. It includes sections such as:
 - Home: Introduction and brief overview
 - Projects: Details about your projects, including the Pomodoro technique project
+- Expirience: Aviation expirience to combine aviation with technology
 - Contact: A form for visitors to send you messages
 
 ## Features
